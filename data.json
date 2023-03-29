@@ -1,0 +1,80 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "title": "Next.js Tutorial - 33 - SSR with Dynamic Parameters",
+            "summary": "SSR with Dynamic Parameters in Next.js",
+            "description": "Next.js Tutorial on SSR with Dynamic Parameters",
+            "category": "sports",
+            "date": "Jan 2nd"
+        },
+        {
+            "id": 2,
+            "title": "Next.js Tutorial - 34 - getServerSideProps context",
+            "summary": "getServerSideProps context in Next.js",
+            "description": "Next.js Tutorial on getServerSideProps context",
+            "category": "food",
+            "date": "March 18th"
+        },
+        {
+            "id": 3,
+            "title": "Next.js Tutorial - 35 - Inspecting SSR Builds",
+            "summary": "Inspecting SSR Builds in Next.js",
+            "description": "Next.js Tutorial on Inspecting SSR Builds",
+            "category": "technology",
+            "date": "October 22nd"
+        }
+    ],
+    "dashboard": {
+        "posts": 5,
+        "likes": 2000,
+        "followers": 20,
+        "following": 50
+    },
+    "news": [
+        {
+            "id": 1,
+            "title": "Next.js Tutorial - 33 - SSR with Dynamic Parameters",
+            "summary": "SSR with Dynamic Parameters in Next.js",
+            "description": "Next.js Tutorial on SSR with Dynamic Parameters",
+            "category": "sports"
+        },
+        {
+            "id": 2,
+            "title": "Next.js Tutorial - 34 - getServerSideProps context",
+            "summary": "getServerSideProps context in Next.js",
+            "description": "Next.js Tutorial on getServerSideProps context",
+            "category": "politics"
+        },
+        {
+            "id": 3,
+            "title": "Next.js Tutorial - 35 - Inspecting SSR Builds",
+            "summary": "Inspecting SSR Builds in Next.js",
+            "description": "Next.js Tutorial on Inspecting SSR Builds",
+            "category": "sports"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Dark Elf",
+            "description": "Lorem ipsum dolosit acmet",
+            "price": 2000,
+            "sex": "female"
+        },
+        {
+            "id": 2,
+            "name": "High Elf",
+            "description": "Lorem ipsum dolosit acmet",
+            "price": 4000,
+            "sex": "female"
+        },
+        {
+            "id": 1,
+            "name": "Human Sorcerer",
+            "description": "Lorem ipsum dolosit acmet",
+            "price": 800,
+            "sex": "female"
+        }
+    ]
+}
