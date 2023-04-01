@@ -4,6 +4,7 @@ interface IBlogProps {
 }
 
 const Blog: React.FunctionComponent<IBlogProps> = (props) => {
+  
   return <div className=""></div>;
 };
 
