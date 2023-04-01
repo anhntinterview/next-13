@@ -7,6 +7,7 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
         email: "",
         password: "",
     });
+    const [msg, setMsg] = React.useState<string>();
 
     const handleEmailValue = (e: React.ChangeEvent<HTMLInputElement>) => {
         setuser((prevState) => ({
@@ -33,7 +34,11 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
         });
 
         const data = await response.json();
-        console.log(data);
+        data
+            ? setMsg(
+                  "Register is successfully. Please checking your email to active your email"
+              )
+            : setMsg("Register fail");
     };
 
     return (
@@ -51,6 +56,7 @@ const Register: React.FunctionComponent<IRegisterProps> = (props) => {
                 placeholder="Typing your password"
             />
             <button onClick={handleRegister}>Register</button>
+            {msg && <p>{msg}</p>}
         </div>
     );
 };

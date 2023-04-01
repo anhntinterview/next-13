@@ -13,8 +13,11 @@ const SignIn: React.FunctionComponent<ISignInProps> = ({ providers }) => {
     });
     const router = useRouter();
     const session = useSession();
+    const [isError, setIsError] = React.useState<string>();
 
     React.useEffect(() => {
+        console.log(session.data);
+        
         if(session.data) {
             router.push("/ecommercial/home");
         }
@@ -47,7 +50,7 @@ const SignIn: React.FunctionComponent<ISignInProps> = ({ providers }) => {
             callbackUrl: router.query.callbackUrl as string,
         });
 
-        console.log(`res: `, res);
+        res?.error && setIsError(res.error)
     };
 
     return (
@@ -58,8 +61,12 @@ const SignIn: React.FunctionComponent<ISignInProps> = ({ providers }) => {
                 value={auth.password}
                 onChange={handlePasswordValue}
             />
-            <button onClick={handleSignInByGithub}>Sign In with Github</button>
+            
             <button onClick={handleSignInByCredentials}>Sign In with Credentials</button>
+            <br />
+            <hr />
+            <button onClick={handleSignInByGithub}>Sign In with Github</button>
+            {isError && <p>{isError}</p>}
             {/* {Object.values(providers).map(
                 (provider) =>
                     provider.name !== "Credentials" && (

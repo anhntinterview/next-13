@@ -1,7 +1,11 @@
 namespace NodeJS {
     interface ProcessEnv extends NodeJS.ProcessEnv {
         EMAIL_SERVER: string;
+        EMAIL_HOST: string;
         EMAIL_FROM: string;
+        EMAIL_PORT: string;
+        EMAIL_USER: string;
+        EMAIL_PASSWORD: string;
         APPLE_ID: string;
         APPLE_TEAM_ID: string;
         APPLE_PRIVATE_KEY: string;

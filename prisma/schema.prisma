@@ -73,6 +73,7 @@ model myUser {
   name         String?
   email        String? @unique
   access_token String?
+  active       Boolean @default(false)
 }
 
 // model Post {

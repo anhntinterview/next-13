@@ -42,6 +42,9 @@ export default NextAuth({
                 if (!user) {
                     throw new Error("Email is not registered");
                 }
+                if (!user.active) {
+                    throw new Error("Email is not activated");
+                }
                 console.log(`user: `, user);
                 const isPasswordCorrect = await compare(
                     credentials!.password,

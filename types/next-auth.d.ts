@@ -7,12 +7,19 @@ declare module "next-auth" {
     interface Session {
         /** This is an example. You can find me in types/next-auth.d.ts */
         foo: string;
+        user: {
+            active: boolean
+        }
     }
     // FIXED BUG: authorize of providers
     // just receive Awaitable type instead of Promise type of return value
     // Reference: https://stackoverflow.com/questions/75198644/nextauth-credentials-with-typescript
     interface MyUser extends MyUserModel {
         id: number; // <- here it is
+        active: boolean;
+        name: string;
+        email: string;
+        access_token: string;
     }
 }
 
